@@ -1,19 +1,40 @@
 :root
 {
-  --color-almostblack: #181818;
+  --color-almostblack: #121314;
   --color-code-bg: #1d1d1d;
   --color-pale: #d9d9d0;
-  --color-accent: #ffffff;
+  --color-accent: #FF0;
 
   --footer-height: 110px;
   --block-width: 900px;
-}
+  
+  /* Font */
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; 
+  /* Serif */
+  --serif: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif; 
+  /* Serif */
+  --mono: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; 
 
+  --ln-h: 1.4rem;
+}
 code { display: block; white-space: pre }
-body { font-family: var(--font); background-color: var(--color-almostblack); margin: 0px; padding: 0px; transition: opacity 150ms; opacity: 1 !important; color: var(--color-pale) }
-a { cursor: pointer; color: var(--color-pale); }
-a:hover { color: var(--color-accent); }
+body { font-family: var(--font); background-color: var(--color-almostblack); margin: 0px; padding: 0px; color: var(--color-pale); font-size: 16px; }
+a { transition: all 150ms; cursor: pointer; color: var(--color-pale); }
+a:hover { opacity: 1 !important; }
 #content hr { display: block; margin: 40px 0 20px 0; border: 1px solid var(--color-pale); }
+
+button {
+  padding: 6px 12px;
+  background-color:transparent;
+  color:#ff0;
+  border:1px solid rgba(255,255,0,0.35);
+  box-shadow: -3px 3px 0px rgba(255,255,0,0.35);
+  border-radius:4px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  transition: all 250ms ease;
+  font-weight: bold;
+} button:hover { border-color: #FF0; box-shadow: -4px 4px 0 #FF0;  }
 
 .logo { background-image: url("../svg/logo.svg"); background-size: contain; background-repeat: no-repeat; background-position-y: center; }
 
@@ -22,7 +43,7 @@ a:hover { color: var(--color-accent); }
 #header { display: block; position: relative; width: 100%; min-height: 120px; }
 #header #photo { display: block; position: relative; width:100%; height: 91vh; max-height: 1080px; -webkit-background-size: cover, cover; -moz-background-size: cover, cover; background-size: cover, cover; -o-background-size: cover, cover; background-position: center center, bottom center; background-repeat: no-repeat, no-repeat; transition: all 150ms; }
 #header video {  position: fixed; top: 50%; left: 50%; width: auto; height: auto; z-index: -100; transform: translate(-50%, -50%); }
-#header #logo { display: block; position: fixed; z-index: 200; width: 35px; height: 35px; top: 40px; left: 40px; }
+#header #logo { display: block; position: fixed; z-index: 200; width: 100px; height: 35px; top: 40px; left: 40px; }
 #header #logo.sticky { position: absolute; top: initial; bottom: 44px }
 #header iframe { width: 100%; height: 100%; overflow: hidden; }
 
@@ -31,9 +52,9 @@ a:hover { color: var(--color-accent); }
 
 #footer { display: block; position:absolute; bottom: 0; width: 100%; padding: 0px 40px; }
 #footerwrap { display: inline-block; width: 100%; padding: 40px 0px; margin: 0px; max-width: 100%; font-size: 20px; color: #fff; }
-#footerwrap .logo { width: 17px; height: 30px; margin: none; float: left; }
+#footerwrap .logo { width: 100px; height: 30px; margin: none; float: left; }
 #footerwrap .credit { display: inline-block; margin-left: 20px; font-size: 14px; }
-#footerwrap a.icon         { width: 20px; height: 30px; margin: 0px 8px; background-size: contain; background-repeat: no-repeat; background-position-y: center; display: block; float: right; }
+#footerwrap a.icon         { width: 20px; height: 20px; margin: 0px 8px; background-size: contain; background-repeat: no-repeat; background-position-y: center; display: block; float: right; }
 #footerwrap a.icon.github     { background-image: url("../svg/github.svg"); }
 #footerwrap a.icon.twitter    { background-image: url("../svg/twitter.svg"); }
 #footerwrap a.icon.webring    { background-image: url("../svg/rotonde.svg"); }
@@ -48,20 +69,20 @@ a:hover { color: var(--color-accent); }
 #content .collection, #content .desc { margin: 0 0 20px 0; padding-right: 40px;}
 #content .collection { width: 50%; float: left; }
 #content .collection:after{ content:""; clear: both; display: block; }
-#content #presentation { display: block; margin: 0 240px; }
+#content #presentation { display: block; margin: 0 auto; max-width: 900px;  }
 
 /* homepage listing */
 #content #home { display: block; width: 100%; column-width: 220px; column-count: auto}
 
 .topicblock { display:table; vertical-align: top; min-width: 200px; margin-bottom: 20px; -webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid; }
-.topicblock .topichead { display: inline-block; font-family: var(--font); font-weight: bold; margin-bottom: 10px; font-size: 20px; user-select: none; -moz-user-select: none; -webkit-user-select: none; }
-.topicblock .topic { display: block; margin-bottom: 2px; width:auto; }
+.topicblock .topichead {opacity:.5; display: inline-block; font-family: var(--mono); font-weight: 100; margin-bottom: 10px; font-size: 20px; user-select: none; -moz-user-select: none; -webkit-user-select: none; }
+.topicblock .topic { display: block; margin-bottom: 6px; width:auto; }
 h2 { margin-bottom: 10px; }
 h2 a:after, .topicblock a:after { content: ""; }
 h2 a:hover:after, .topicblock a:hover:after { margin-right: 2px; content: " •"; transition: all 150ms;}
 
 /* generated by runic */
-#content p { line-height: 1.3em; font-size: 1.4em; display: block; font-family: var(--font); font-weight: regular; margin-bottom: 20px; }
+#content p { line-height: var(--ln-h); max-width: 900px; display: block; font-family: var(--font); font-weight: regular; margin-bottom: 20px; }
 #content p b { font-family: var(--font); font-weight: bold; font-weight: normal; }
 #content p b i { font-family: var(--font); font-style: italic; font-weight: normal; }
 #content p i { font-family: var(--font); font-weight: regular; font-style: italic; }

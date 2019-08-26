@@ -1,0 +1,8 @@
+let DATABASE = `
+
+HOME
+  VIEW : home
+  HEAD : 0050.jpg
+  DESC : Legacy home.
+
+`

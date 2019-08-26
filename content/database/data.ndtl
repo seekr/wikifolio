@@ -2,28 +2,18 @@ let DATABASE = `
 
 HOME
   VIEW : home
-  HEAD : 0050.jpg
+  HEAD : 0001.jpg
   DESC : Legacy home.
 
-SOFTWARE
+WRITING
+  VIEW : index
+  FROM : home
+  DESC : index of random writings.
+
+PORTFOLIO
   VIEW : index
   FROM : home
   DESC : Colleciton of video games, software and interactive projects.
-
-HARDWARE
-  VIEW : index
-  FROM : home
-  DESC : index of physical projects, hardware, DIY and repair builds.
-
-DIGITAL
-  VIEW : index
-  FROM : home
-  DESC : index of digital projects, shaders and virtual experiments.
-
-ANALOGUE
-  VIEW : index
-  FROM : home
-  DESC : index of projects that don't revolve around computers.
 
 META
   VIEW : index
@@ -36,65 +26,35 @@ META
     - To contact me, message me on {twitter(http://twitter.com/nomand)} for the quickest response.
     - Find how you can support me and my work {here(support)}
 
-
-WORMHOLE
-  VIEW : index
-  FROM : meta
-  DESC : Creative playground and possibility space.
-
-GARAGE
-  VIEW : index
-  FROM : wormhole
-  DESC : Projects that are in progress, incomplete and in pieces.
-
-GRAVEYARD
-  VIEW : index
-  FROM : wormhole
-  DESC : Projects I know I'll never start or ever finish.
-
-NOMAND
+MARIO SIQUEIRA
   VIEW : project
   FROM : meta
   HEAD : 0003.jpg
-  DESC : My name is Alexey Botkov.
+  DESC : My name is Mario Siqueira.
   LONG
-    & {_nomand_} is my alias and the name I go by on various networks.
-    & I was born in Russia, currently based in New Zealand. I'm a technologist and multimedia artist with projects spanning various disciplines and mediums.
+    & {_Mario Siqueira_} is a product designer.
+    & I was born in Portugal, raised in Macau and currently based in Argentina. I'm a technologist and multimedia artist with projects spanning various disciplines and mediums.
     - {Work with me(runningtap)}
     - To contact me, message me on {twitter(http://twitter.com/nomand)} for the quickest response.
     - Find how you can support me and my work {here(support)}
 
-SUPPORT
-  VIEW : project
+PRINCIPLES
+  VIEW : index
   FROM : meta
-  DESC : Ways you can support me and my work.
+  DESC : Principles that guide me.
   LONG
-    & Support me and my research:
+    & Lorem ipsum
     - Follow me on {twitter(https://twitter.com/nomand)}.
     - Subscribe to my {youtube(https://www.youtube.com/c/nomand)} channel.
     - Donate {(bitcoin)}
     - Help me buy tools from my {(wishlist)}
-
-RUNNINGTAP
-  VIEW : project
-  FROM : meta
-  HEAD : 0007.jpg
-  DESC : A digital business entity.
-  LONG
-    & {_Runningtap_} is my business entity through which I offer consulting, R&D, prototyping and design services.
-    & If you're interested in me working with you, reach out through the runningtap {website(http://runningtap.com/)}.
-
-FROGSHARK
-  VIEW : project
-  DESC : An indie game development studio.
-  LONG
-    & {Frogshark(http://frogshark.com)} is a 3 person studio, co-founded by {Hamish MacDonald(http://kor.co.nz/)}, Danny Lawrie and {myself(nomand)} in 2014.
-    & Frogshark developed and published {(Swordy)}.
-    & I left Frogshark in 2017.
+  
+DESIGN PRINCIPLES
+  VIEW : 
 
 PICOPICA
   VIEW : project
-  FROM : hardware
+  FROM : portfolio
   HEAD : 0021.jpg
   TAGS : raspberrypi, github
   DESC : A {raspberry pi(tag raspberrypi)} based timelapse camera.
@@ -110,19 +70,9 @@ PICOPICA
     & This project is work in progress.
     & Code and STL files available on the project {github(https://github.com/nomand/picopica)} page.
 
-HSVLED
-  VIEW : project
-  FROM : hardware
-  HEAD : 0001.jpg
-  TAGS : arduino, light, led, github
-  DESC : An {arduino(tag arduino)} based {lighting(tag light)} project to illuminate my working space.
-  LONG
-    & Uses off the shelf components like {led(tag led)} strips.
-    & Code and STL files available on the project {github(https://github.com/nomand/HSVStripController)} page.
-
 EACHINEVR006
   VIEW : project
-  FROM : hardware
+  FROM : portfolio
   HEAD : 0002.jpg
   TAGS : drones, fpv, guide, github
   DESC : A portable spectator {(fpv)} screen.
@@ -149,7 +99,7 @@ SWORDY PINS
 
 MERLIN FOB
   VIEW : project
-  FROM : hardware
+  FROM : portfolio
   HEAD : 0032.jpg
   TAGS : fdm, prototyping, repair
   DESC : 3D Printed case replacement for Merlin garage door.
@@ -322,7 +272,7 @@ VIZCERA
 
 XBL3
   VIEW : project
-  FROM : hardware
+  FROM : portfolio
   HEAD : 0000.jpg
   TAGS : drones, fpv
   DESC : A 3" racing drone.
@@ -351,7 +301,7 @@ XBL3
 
 NOMV2
   VIEW : project
-  FROM : hardware
+  FROM : portfolio
   HEAD : 0012.jpg
   TAGS : drones, fpv
   DESC : A custom 2.5" micro drone.
@@ -364,19 +314,9 @@ NOMV2
     % 0013.jpg inline
     % 0014.jpg inline
 
-LEGACY
-  VIEW : summary
-  FROM : meta
-  TAGS : web, github
-  DESC : A wiki-like project depot.
-  LONG
-    & {_Legacy_} is an evolving static wiki-like site dedicated to documenting my research, projects and creative output.
-    & Inspired by Devine Lu Linvega's {Oscean(https://github.com/XXIIVV/Oscean/tree/master)}, the repository for the site is hosted on {github(https://github.com/nomand/Legacy)}, master branch is the live version.
-    & The code is licensed under {MIT(https://github.com/nomand/Legacy/blob/master/LICENSE.md)}.
-
 GBA
   VIEW : project
-  FROM : hardware
+  FROM : portfolio
   HEAD : 0054.jpg
   TAGS : mods, repair
   DESC : A custom Gameboy Advance
@@ -542,7 +482,7 @@ DIGITAL CAMERA
 
 TADA68
   VIEW : project
-  FROM : hardware
+  FROM : portfolio
   HEAD : 0065.jpg
   DESC : Custom mechanical keyboard based on Tada68.
   TAGS : gear, mods
